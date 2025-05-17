@@ -6,35 +6,17 @@ description: A brief introduction to Instant.bot and what we're all about
 
 ## What is Instant.bot?
 
-[Instant.bot](http://instant.bot) is a customizable AI chatbot with a focus on function calling.
+[Instant.bot](http://instant.bot) is a customizable AI agent with a focus on function calling.
 
-**You can extend it with hosted tools.** We host the functions for you on auto-scaling architecture. These tools are available as open source packages like [Stripe (retrieves customers)](https://instant.bot/packages/@keith/stripe) and [GPT Image Generator (creates images)](https://instant.bot/packages/@keith/openai-gpt-image). You can fork, modify or build your own versions of these packages, or build your own private ones. Sort of like GitHub for LLM tools.
+**You can extend your agent with hosted tools.** We host the functions for you as API servers on auto-scaling architecture. These tools are available as open source packages;
 
-**Once you’ve built your chatbot you can deploy where it’s most convenient.** Currently you can chat on the web via our website or in Discord, but we are working on Slack, a standalone API and more.
+* [Stripe (retrieves customers)](https://instant.bot/packages/@keith/stripe)
+* [GPT Image Generator (creates images)](https://instant.bot/packages/@keith/openai-gpt-image)
+* [Current weather](https://instant.bot/packages/@keith/weather)
 
-It’s still early: we’re in beta and have a lot to build, so if you encounter any rough edges please let us know, [feedback@instant.bot](mailto:feedback@instant.bot)!
+**You can fork, modify or build your own versions of packages.** You can also build your own private packages just for you or your team. Sort of like GitHub for LLM tools.
 
-## Who is this for?
-
-Our ideal target customer is **developer-curious** and has a desire to build internal- or customer- facing chatbots to automate mundane daily tasks; like providing customer support in a Discord server, generating internal analytics charts, or providing refunds to customers. Our goal is to allow people to go from zero → working, function-integrated chatbot ASAP without having to be a professional software engineer.
-
-However — **professional software engineers** should enjoy the platform, too. We are an **open core** company. Every part of the [Instant.bot](http://instant.bot) product is powered by open source software. Packages that run on our registry and gateway can be run locally or stood up on third-party providers like AWS and Vercel.
-
-## Why are we building this?
-
-Everybody is excited about the promise of agents that can execute arbitrary functions on your behalf. Most recently, [Model Context Protocol](https://modelcontextprotocol.io/introduction) by Anthropic has created a new standard for integrating hosted functions with language models.
-
-However, the ecosystem is still very young. Building robust, secure agents that you can extend with (1) your own code and (2) trusted third-party code is non-trivial. Here are some questions we’ve asked ourselves;
-
-1. **How can I verify the authenticity of hosted tools?** In a world of many integration providers (e.g. MCP servers), do I only trust major businesses, or is there a way to trust individual developers?
-2. **How do I securely share third-party secrets?** I do not want hosted tools I do not control to have unlimited access to my data.
-3. **How do I handle access control?** Can I allow or disallow certain tools based on the user who is requesting them?
-4. **How do I reuse and modify the work of others before me?** For example, if Square’s MCP server doesn’t do exactly what I want, can I extend it?
-5. **What protocols and frameworks do I have to learn?** There’s MCP, A2A, LangChain, OpenAI Agents SDK, Cloudflare Agents SDK, what do I choose and why?
-6. **How do I rapidly prototype function integration with language models?**
-7. **How do I ensure&#x20;**_**the model actually does what I want it to do**_**?** Simple demos work fine, but function-calling for complex tasks still seems hit-or-miss!
-
-**At Instant.bot we’ve imagined a developer product directly integrated with a chatbot** — where writing code, testing functions, integrating function calls are an _integrated part_ of the chatbot experience. Our job is to answer each of these questions so you don’t have to and can simply focus on delivering an tool-integrated experience that matches your expectations.
+**You can deploy your agent where it’s most convenient.** Currently you can chat on the web via our website or in Discord, but we are working on Slack, a standalone API and more.
 
 ## Product features
 
@@ -84,7 +66,7 @@ Automatically gets exported as the endpoint `{package}.instant.host/hello`. Atte
 
 Instant.bot provides both an online IDE and [command line utility](https://github.com/instantbots/ibot) that allow you to rapidly iterate on your hosted tool packages. You can use either to test your tools with specific parameters — our online IDE has a **\[Run]** button with configurable payloads, and our CLI provides `ibot run /tool-name --param1=value`.
 
-Deploying to our hosted tool platform is nearly instantaneous and averages \~3s, meaning testing via our online IDE is nearly as fast as building locally!
+Deploying to our hosted tool platform is instant, averaging \~3s per deploy, meaning testing via our online IDE is nearly as fast as building locally!
 
 You can test how your functions integrate with your agent via our web chat interface at [https://instant.bot/chat](https://instant.bot/chat). Here can chat with your agents and test your how your function integrations behave in real-time chat without any additional setup.
 
