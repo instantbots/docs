@@ -86,4 +86,4 @@ You can view up-to-date pricing at [Instant.bot / Pricing](https://instant.bot/p
   * 200ms execution for a hosted tool with 512MB of RAM is $0.00005
   * Meaning 1,000 function calls at this rate would be $0.05
 
-You can pay for the chatbot absent of using tools, pay for the tools absent of using our chatbot, or pay for both together! Subscription refills will automatically add credits to your function credit balance.
+You can pay for your agent absent of using tools, pay for the tools absent of using our agent, or pay for both together! Subscription refills will automatically add credits to your function credit balance.
