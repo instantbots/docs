@@ -68,7 +68,7 @@ Instant.bot provides both an online IDE and [command line utility](https://githu
 
 Deploying to our hosted tool platform is instant, averaging \~3s per deploy, meaning testing via our online IDE is nearly as fast as building locally!
 
-You can test how your functions integrate with your agent via our web chat interface at [https://instant.bot/chat](https://instant.bot/chat). Here can chat with your agents and test your how your function integrations behave in real-time chat without any additional setup.
+You can test how your functions integrate with your agent via our web chat interface at [https://instant.bot/chat](https://instant.bot/chat). Here you can chat with your agents and test your how your function integrations behave in real-time chat without any additional setup.
 
 ### 7. Model function-calling accuracy
 
