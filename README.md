@@ -42,7 +42,7 @@ Our goal is to be protocol and framework agnostic on the package consumption sid
 
 **Instant.bot packages are simply RESTful API servers.** They expose a traditional OpenAPI specification at `/.well-known/openapi.json`. We host them on top of auto-scaling architecture so you never have to worry about downtime.
 
-**There is only one framework to learn:** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.bot experience. Instant API will automatically creating standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
+**There is only one framework to learn:** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.bot experience. Instant API will automatically create standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
 
 **Our framework can be run anywhere.** You aren’t locked in to our registry or hosting platform. You can run Instant API projects on AWS, Vercel or any major cloud provider.
 
@@ -60,7 +60,7 @@ export async function GET (name = 'world', age = 30) {
 }
 ```
 
-Automatically gets exported as the endpoint `{package}.instant.host/hello`. Attempting to pass in `?age=-5` via query parameters will throw a `BadRequest` error and our gateway will reject it.
+This function automatically gets exported as the endpoint `{package}.instant.host/hello`. Attempting to pass in `?age=-5` via query parameters will throw a `BadRequest` error and our gateway will reject it.
 
 ### 6. Rapid prototyping
 
