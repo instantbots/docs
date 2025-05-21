@@ -81,7 +81,7 @@ This is the place where we’re currently experimenting the most. Right now our 
 You can view up-to-date pricing at [Instant.bot / Pricing](https://instant.bot/pricing). Quick summary;
 
 * We charge a monthly subscription fee for access to our chatbot
-  * Starting at $20 / mo for 5,000 messages / month
+  * Starting at $19 / mo for 5,000 messages / month
 * We charge per-use for hosted tools at a rate of $0.50 per 1,000 GB-s of usage
   * 200ms execution for a hosted tool with 512MB of RAM is $0.00005
   * Meaning 1,000 function calls at this rate would be $0.05
