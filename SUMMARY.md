@@ -2,11 +2,6 @@
 
 * [Introduction](README.md)
 
-## Specifications
-
-* [Package specification](specifications/package-specification.md)
-* [API keychain specification](specifications/api-keychain-specification.md)
-
 ## Getting started
 
 * [Creating a new agent](getting-started/creating-a-new-agent.md)
@@ -21,6 +16,11 @@
 * [Optimizing tool calls](optimizing-tool-calls.md)
 * [Archiving your agent](archiving-your-agent.md)
 * [Removing your custom code](removing-your-custom-code.md)
+
+## Specifications
+
+* [Package specification](specifications/package-specification.md)
+* [API keychain specification](specifications/api-keychain-specification.md)
 
 ## Using your agent
 

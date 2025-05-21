@@ -119,7 +119,15 @@ Your agent automatically has an API keychain assigned to it when it is created. 
 
 ## Using API keychains for authentication
 
-You can create your own API keychains to use with packages at [instant.bot/dashboard/api-keychains](https://instant.bot/dashboard/api-keychains). Each API keychain created here will have its own **API keychain secret**. You can use this secret as a `Bearer` token to access any public package available at [instant.bot/packages](https://instant.bot/packages).
+You can create your own API keychains to use with packages at [instant.bot/dashboard/api-keychains](https://instant.bot/dashboard/api-keychains). If you do not yet have a keychain, you can create one at [instant.bot/dashboard/api-keychains/new](https://instant.bot/dashboard/api-keychains/new) or by clicking **+ Create API keychain** on the keychains page.
+
+<figure><img src="../.gitbook/assets/SCR-20250521-nfpt.png" alt=""><figcaption><p>Create an API keychain</p></figcaption></figure>
+
+Each API keychain created here will have its own **secret key**.
+
+<figure><img src="../.gitbook/assets/SCR-20250521-nghg.png" alt=""><figcaption></figcaption></figure>
+
+You can use this secret as a `Bearer` token to access any public package available at [instant.bot/packages](https://instant.bot/packages).
 
 ```sh
 curl https://{package}.instant.host/endpoint-name \
@@ -129,14 +137,67 @@ curl https://{package}.instant.host/endpoint-name \
   --data '{"some":"json"}'
 ```
 
-## Storing third-party secrets
+For example, the example weather package has a [GET endpoint for retrieving current weather](https://instant.bot/packages/@keith/weather/v-20240823/functions/forecast.js?method=GET). You can see instructions for how to use it as a standalone endpoint if you scroll down on the endpoint page:
+
+<figure><img src="../.gitbook/assets/SCR-20250521-neks.png" alt=""><figcaption><p>Copy endpoint instructions</p></figcaption></figure>
+
+You can see instructions on how to use any specific endpoint via its package page.
+
+## Managing third-party secrets
 
 {% hint style="warning" %}
-We're working on finishing this part of the docs, we have a new feature coming! Stay tuned.
+By default, packages only have access to shared secrets that (1) they request access to and (2) you opt to share. We refer to this as "double opt-in secret sharing"
+
+Adding a secret here **will not** automatically share it with packages. Please see **delegating access to packages** below.
 {% endhint %}
+
+Each API keychain can store as many third-party secrets as you'd like. To manage secrets, first visit the API keychains page at [instant.bot/dashboard/api-keychains](https://instant.bot/dashboard/api-keychains) and select your keychain.
+
+<figure><img src="../.gitbook/assets/SCR-20250521-ngxi.png" alt=""><figcaption><p>Find your keychain</p></figcaption></figure>
+
+This will take you to your API keychain page. Right under the **Secret key** section you'll see a **Shared secrets** section.
+
+<figure><img src="../.gitbook/assets/SCR-20250521-nijx.png" alt=""><figcaption><p>Shared secrets</p></figcaption></figure>
+
+You can click **+ Add new key** to add a new shared secret. Then fill out the secret details and save.
+
+<figure><img src="../.gitbook/assets/SCR-20250521-niti.png" alt=""><figcaption><p>Set shared secrets</p></figcaption></figure>
+
+That's it! You can add or manage as many keys as you want for each keychain.
 
 ## Delegating access to packages
 
-{% hint style="warning" %}
-We're working on finishing this part of the docs, we have a new feature coming! Stay tuned.
-{% endhint %}
+In order to use packages with this keychain, you must **install** each package to the keychain. In practice this means setting a config that looks like this:
+
+```json
+{
+  "@keith/weather": {
+    "version": "v-20250101",
+    "sha256": "[some-sha-hash]",
+    "permissions": {}
+    "keys": []
+  }
+}
+```
+
+* Each property key specifies the package name
+* `"version"` specifies which version of the package to use
+* `"sha256"` is used to code-lock on a specific deployment (if it gets overwritten, your keychain will prevent access), can be `null` if ignored
+* `"permissions"` delegates specific endpoint access
+* `"keys"` tells us which keys (shared secrets) you have opted-in to share with this package from your keychain
+
+However, **we manage this configuration for you** via our user interface. Simply visit your keychain page and scroll down to find packages:
+
+<figure><img src="../.gitbook/assets/SCR-20250521-nlhl.png" alt=""><figcaption><p>Install packages from the UI</p></figcaption></figure>
+
+You can **Discover** approved packages or add packages that are in **Development**, e.g. created by the community. You can use this to view and manage package configuration and install packages for use with this keychain.
+
+<figure><img src="../.gitbook/assets/SCR-20250521-nlwh.png" alt=""><figcaption><p>Manage config or install packages</p></figcaption></figure>
+
+When you **view and manage package configuration** you can set:
+
+* **Security**: manage code-locking with package SHA256
+* **Shared secrets**: Which secrets you're sharing from your keychain
+* **Endpoint access**: Choose which tools to actually enable with this installation
+
+That's it! Once you've added shared secrets and installed packages, your keychain is good to be used anywhere.
