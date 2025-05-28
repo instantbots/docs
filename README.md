@@ -38,8 +38,6 @@ Since all packages are open source, they can all be trivially inspected, forked,
 
 ### 5. Protocols and frameworks
 
-Our goal is to be protocol and framework agnostic on the package consumption side. By the time we leave beta you should be able to use Instant.bot packages with every major LLM provider (via MCP, A2A bindings) and agentic framework (LangChain, OpenAI Agents SDK, Cloudflare Agents SDK).
-
 **Instant.bot packages are just a collection of JavaScript functions.** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.bot experience. Instant API will automatically create standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
 
 **Packages are available as both REST API servers and MCP servers.** Packages expose a traditional OpenAPI specification at `/.well-known/openapi.json` and an MCP server at `/server.mcp`. We host them on top of auto-scaling architecture so you never have to worry about downtime.
