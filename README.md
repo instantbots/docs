@@ -8,7 +8,7 @@ description: A brief introduction to Instant.bot and what we're all about
 
 [Instant.bot](http://instant.bot) is a customizable AI agent with a focus on function calling.
 
-**You can extend your agent with hosted tools.** We host the functions for you as API servers on auto-scaling architecture. These tools are available as open source packages;
+**You can extend your agent with hosted tools.** We host the functions for you as both REST API and MCP servers on auto-scaling architecture. These tools are available as open source packages;
 
 * [Stripe (retrieves customers)](https://instant.bot/packages/@keith/stripe)
 * [GPT Image Generator (creates images)](https://instant.bot/packages/@keith/openai-gpt-image)
@@ -40,11 +40,11 @@ Since all packages are open source, they can all be trivially inspected, forked,
 
 Our goal is to be protocol and framework agnostic on the package consumption side. By the time we leave beta you should be able to use Instant.bot packages with every major LLM provider (via MCP, A2A bindings) and agentic framework (LangChain, OpenAI Agents SDK, Cloudflare Agents SDK).
 
-**Instant.bot packages are simply RESTful API servers.** They expose a traditional OpenAPI specification at `/.well-known/openapi.json`. We host them on top of auto-scaling architecture so you never have to worry about downtime.
+**Instant.bot packages are just a collection of JavaScript functions.** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.bot experience. Instant API will automatically create standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
 
-**There is only one framework to learn:** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.bot experience. Instant API will automatically create standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
+**Packages are available as both REST API servers and MCP servers.** Packages expose a traditional OpenAPI specification at `/.well-known/openapi.json` and an MCP server at `/server.mcp`. We host them on top of auto-scaling architecture so you never have to worry about downtime.
 
-**Our framework can be run anywhere.** You aren’t locked in to our registry or hosting platform. You can run Instant API projects on AWS, Vercel or any major cloud provider.
+**Our framework can be run anywhere.** You are not locked in to our registry or hosting platform. You can run Instant API projects on AWS, Vercel or any major cloud provider.
 
 Here's an example of a tool built with Instant API, a simple `hello world` endpoint that might exist at `functions/hello.js`:
 

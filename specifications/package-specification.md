@@ -6,16 +6,11 @@ description: A guide to packages on Instant.bot
 
 ## Overview
 
-{% hint style="info" %}
-Our hosted tools are **not MCP servers** by default.\
-Every package is simply a REST API server with endpoints as tools.\
-These tools can be used in all traditional function-calling architectures.\
-We expect to add support for Model Context Protocol before we finish our beta.
-{% endhint %}
+All packages on Instant.bot are available as both **REST API servers** and **MCP servers**. They are hosted on `{package}.instant.bot` and expose HTTP endpoints that act as tools. They are built using the [Instant API framework](https://gitub.com/instant-dev/api), a JavaScript framework and gateway that turns JavaScript functions into type-validated HTTP endpoints with built-in bindings for the MCP Streamable HTTP specification.
 
-All packages on Instant.bot are **REST API servers**. They are hosted on `{package}.instant.bot` and expose HTTP endpoints that act as tools. They are built using the [Instant API framework](https://gitub.com/instant-dev/api), a JavaScript framework and gateway that turns JavaScript functions into type-validated HTTP endpoints.
+**REST** means **Re**presentational **S**tate **T**ransfer and is a fancy way of saying these servers expose endpoints that support multiple HTTP verbs: `GET`, `POST`, `PUT`, `DELETE`.
 
-**REST** means **Re**presentational **S**tate **T**ransfer and is a fancy way of saying these servers support multiple HTTP verbs: `GET`, `POST`, `PUT`, `DELETE`.
+**MCP** stands for **M**odel **C**ontext **P**rotocol and is an emerging standard for connecting LLMs to remote procedure calls. It is currently supported by OpenAI, Anthropic and Google Gemini APIs.
 
 ## Quick examples
 
