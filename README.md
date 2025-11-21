@@ -4,9 +4,9 @@ description: A brief introduction to Instant.bot and what we're all about
 
 # Introduction
 
-## What is Instant.bot?
+## What is Instant.chat?
 
-[Instant.bot](http://instant.bot) is a customizable AI agent with a focus on function calling.
+[Instant.chat](http://instant.chat/) is a customizable AI agent with a focus on function calling.
 
 **You can extend your agent with hosted tools.** We host the functions for you as both REST API and MCP servers on auto-scaling architecture. These tools are available as open source packages;
 
@@ -38,7 +38,7 @@ Since all packages are open source, they can all be trivially inspected, forked,
 
 ### 5. Protocols and frameworks
 
-**Instant.bot packages are just a collection of JavaScript functions.** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.bot experience. Instant API will automatically create standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
+**Instant.chat packages are just a collection of JavaScript functions.** [**Instant API**](https://github.com/instant-dev/api) is our battle-tested framework that turns simple JavaScript functions into fully-documented, type-validated API endpoints. It has scaled to billions of requests per week in production and currently powers the entire Instant.chat experience. Instant API will automatically create standards-compliant endpoint definitions (OpenAPI, JSON Schema) from function definitions that we then use to populate your package page and tool definitions.
 
 **Packages are available as both REST API servers and MCP servers.** Packages expose a traditional OpenAPI specification at `/.well-known/openapi.json` and an MCP server at `/server.mcp`. We host them on top of auto-scaling architecture so you never have to worry about downtime.
 
@@ -62,21 +62,21 @@ This function automatically gets exported as the endpoint `{package}.instant.hos
 
 ### 6. Rapid prototyping
 
-Instant.bot provides both an online IDE and [command line utility](https://github.com/instantbots/ibot) that allow you to rapidly iterate on your hosted tool packages. You can use either to test your tools with specific parameters — our online IDE has a **\[Run]** button with configurable payloads, and our CLI provides `ibot run /tool-name --param1=value`.
+Instant.chat provides both an online IDE and [command line utility](https://github.com/instantbots/ibot) that allow you to rapidly iterate on your hosted tool packages. You can use either to test your tools with specific parameters — our online IDE has a **\[Run]** button with configurable payloads, and our CLI provides `ibot run /tool-name --param1=value`.
 
 Deploying to our hosted tool platform is instant, averaging \~3s per deploy, meaning testing via our online IDE is nearly as fast as building locally!
 
-You can test how your functions integrate with your agent via our web chat interface at [https://instant.bot/chat](https://instant.bot/chat). Here you can chat with your agents and test your how your function integrations behave in real-time chat without any additional setup.
+You can test how your functions integrate with your agent via our web chat interface at [https://instant.chat/me/chat](https://instant.chat/me/chat). Here you can chat with your agents and test your how your function integrations behave in real-time chat without any additional setup.
 
 ### 7. Model function-calling accuracy
 
 We’re building our own planning engine as a distributed mixture of models that combines the world’s best function-calling models (GPT-4.1, Gemini Flash) to execute on tool strategies.
 
-This is the place where we’re currently experimenting the most. Right now our default chatbot can perform parallel tool calls with high accuracy, but we’re still building multi-step planning and user-interaction modes. Please share feedback at [feedback@instant.bot](mailto:feedback@instant.bot)!
+This is the place where we’re currently experimenting the most. Right now our default chatbot can perform parallel tool calls with high accuracy, but we’re still building multi-step planning and user-interaction modes. Please share feedback at [feedback@instant.chat](mailto:feedback@instant.chat)!
 
 ## How does pricing work?
 
-You can view up-to-date pricing at [Instant.bot / Pricing](https://instant.bot/pricing). Quick summary;
+You can view up-to-date pricing at [Instant.chat / Pricing](https://instant.chat/pricing). Quick summary;
 
 * We charge a monthly subscription fee for access to our chatbot
   * Starting at $19 / mo for 5,000 messages / month
