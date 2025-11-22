@@ -36,4 +36,4 @@ A single broccoli floret has about 10 calories.
 
 ## Reusing old instruction prompts
 
-We currently keep a log of all previously used prompts for your agent, however this is not exposed to end users. If you think a change log or diff would be a valuable feature please reach out to [feedback@instant.bot](mailto:feedback@instant.bot) and let us know!
+We currently keep a log of all previously used prompts for your agent, however this is not exposed to end users. If you think a change log or diff would be a valuable feature please reach out to [feedback@instant.chat](mailto:feedback@instant.chat) and let us know!

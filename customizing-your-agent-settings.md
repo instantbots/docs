@@ -9,7 +9,7 @@ Currently, you can change the following settings on your agent:
 * Instruction prompt
 * Connections (link to Discord, etc.)
 
-If you would like to customize a part of your agent you don't see here, please contact us at [feedback@instant.bot](mailto:feedback@instant.bot) ASAP.
+If you would like to customize a part of your agent you don't see here, please contact us at [feedback@instant.chat](mailto:feedback@instant.chat) ASAP.
 
 ## Changing your agent settings
 
@@ -37,13 +37,13 @@ The display name of your agent is what is visible to you and end users in any ch
 Note that in Discord **your profile picture will not change in the online list**, only in response messages. This is a limitation of the Discord app ecosystem.
 {% endhint %}
 
-Your agent's profile picture controls how it appears on the Instant.bot web interface or on third-party services like Discord and Slack. Just click on your profile picture and upload a new one to change it. We will automatically crop the image to centered square.
+Your agent's profile picture controls how it appears on the Instant.chat web interface or on third-party services like Discord and Slack. Just click on your profile picture and upload a new one to change it. We will automatically crop the image to centered square.
 
 ## Connections
 
 Connections are how you deploy your agent to places where you work or you expect your users to interact with your agent. Currently we support;
 
-* [On the web](using-your-agent/on-the-web.md) (default, via Instant.bot)
+* [On the web](using-your-agent/on-the-web.md) (default, via Instant.chat)
 * [Discord](using-your-agent/discord.md)
 
 We have the following connections planned;
@@ -52,4 +52,4 @@ We have the following connections planned;
 * [Website embed](using-your-agent/website-embed.md)
 * [Developer API](using-your-agent/developer-api.md)
 
-You can reach out to us at [feedback@instant.bot](mailto:feedback@instant.bot) if you'd like anything prioritized here!
+You can reach out to us at [feedback@instant.chat](mailto:feedback@instant.chat) if you'd like anything prioritized here!

@@ -41,6 +41,6 @@
 
 ## Resources
 
-* [Instant.bot](https://instant.bot)
+* [Instant.chat](https://instant.chat)
 * [ibot command line tools](https://github.com/instantbots/ibot)
 * [Instant API](https://github.com/instant-dev/api)

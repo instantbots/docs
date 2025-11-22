@@ -6,7 +6,7 @@ description: Third-party auth via secrets
 
 ## What is an API keychain?
 
-API keychains are an auth primitive we have introduced for building and using hosted tools. They store multiple **secret keys** that authenticate you into third party services like Stripe, OpenAI and more. In order to use packages that require third-party authentication, you must add the appropriate key to your keychain and choose to share it with each package that requests it. We manage this through the Instant.bot user interface automatically.
+API keychains are an auth primitive we have introduced for building and using hosted tools. They store multiple **secret keys** that authenticate you into third party services like Stripe, OpenAI and more. In order to use packages that require third-party authentication, you must add the appropriate key to your keychain and choose to share it with each package that requests it. We manage this through the Instant.chat user interface automatically.
 
 <figure><img src=".gitbook/assets/SCR-20250514-rgpy.png" alt=""><figcaption><p>Manage multiple API secrets from your API keychain</p></figcaption></figure>
 
@@ -42,7 +42,7 @@ For a complete breakdown of API keychain security, please read the [API keychain
 
 ### 1. Install a package that requires a secret key
 
-To use your agent's API keychain you need to use a package that requires an API key. For the purposes of this getting started guide we'll use the [Stripe customers package](https://instant.bot/packages/@keith/stripe) which requires a `STRIPE_SECRET_KEY`. You can verify this on the package page.
+To use your agent's API keychain you need to use a package that requires an API key. For the purposes of this getting started guide we'll use the [Stripe customers package](https://instant.chat/packages/@keith/stripe) which requires a `STRIPE_SECRET_KEY`. You can verify this on the package page.
 
 <figure><img src=".gitbook/assets/SCR-20250514-rigq.png" alt=""><figcaption><p>Packages will display which keys they require</p></figcaption></figure>
 
@@ -92,4 +92,4 @@ Note that revoking key access will make the package effectively defunct. Your ag
 
 ## That's it!
 
-We hope you enjoy secrets management with Instant.bot! We're always open to new ideas and ways of authenticating with third-party services, feel free to drop us a line with suggestions to [feedback@instant.bot](mailto:feedback@instant.bot).
+We hope you enjoy secrets management with Instant.chat! We're always open to new ideas and ways of authenticating with third-party services, feel free to drop us a line with suggestions to [feedback@instant.chat](mailto:feedback@instant.chat).

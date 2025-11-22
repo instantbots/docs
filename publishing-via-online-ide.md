@@ -19,7 +19,7 @@ Our online IDE comes with a bunch of features that make iterating on new tools a
 
 ## Creating a new package
 
-To create a new package using our online IDE find the **Create package** button on [instant.bot/packages](https://instant.bot/packages), or simply visit [instant.bot/packages/new](https://instant.bot/packages/new).
+To create a new package using our online IDE find the **Create package** button on [instant.chat/packages](https://instant.chat/packages), or simply visit [instant.chat/packages/new](https://instant.chat/packages/new).
 
 <figure><img src=".gitbook/assets/SCR-20250516-neft.png" alt=""><figcaption><p>Find the <strong>Create package</strong> button</p></figcaption></figure>
 
@@ -117,5 +117,5 @@ Our IDE has more quality-of-life features baked in:
 * Auto-indenting on paste
   * Intelligently matches copied code to IDE settings
 
-We hope you enjoy! Please send any feedback on the IDE to [feedback@instant.bot](mailto:feedback@instant.bot).
+We hope you enjoy! Please send any feedback on the IDE to [feedback@instant.chat](mailto:feedback@instant.chat).
 

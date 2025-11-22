@@ -1,12 +1,12 @@
 ---
-description: Use your agent from the Instant.bot website
+description: Use your agent from the Instant.chat website
 ---
 
 # On the web
 
-## Chatting via Instant.bot
+## Chatting via Instant.chat
 
-You can chat with your agents at any time via [instant.bot/chat](https://instant.bot/chat).
+You can chat with your agents at any time via [instant.chat/chat](https://instant.chat/chat).
 
 <figure><img src="../.gitbook/assets/SCR-20250515-lzxa.png" alt=""><figcaption><p>Chatting is easy</p></figcaption></figure>
 
@@ -14,7 +14,7 @@ When in desktop mode, simply write your agent a message and hit enter! To add mu
 
 ## Chat input
 
-While in beta, only text input to agents is currently supported. We're working to add multiple modalities and will keep you posted! Please send any feedback here to [feedback@instant.bot](mailto:feedback@instant.bot).
+While in beta, only text input to agents is currently supported. We're working to add multiple modalities and will keep you posted! Please send any feedback here to [feedback@instant.chat](mailto:feedback@instant.chat).
 
 ## Chat output
 
@@ -34,7 +34,7 @@ While in beta we are still working on multi-step tool calling. It is not support
 
 If your agent needs to call any tools, you'll see a separate **\[ Tool call > ]** button for each tool it's calling. There will be a success or failure indicator to the left (success is a checkmark).
 
-<figure><img src="../.gitbook/assets/SCR-20250515-mnif.png" alt=""><figcaption><p>Tool calling built into Instant.bot</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/SCR-20250515-mnif.png" alt=""><figcaption><p>Tool calling built into Instant.chat</p></figcaption></figure>
 
 At any point during the tool call you can inspect it by clicking on it: while processing it will show arguments, and when complete you'll see the full JSON response.
 
@@ -46,7 +46,7 @@ You can also execute multiple tool calls in parallel.
 
 ### Attachments
 
-If the expected result of a tool call is of type `buffer` (see [package-specification.md](../specifications/package-specification.md "mention") for more details) while the tool is executing attachments (square boxes) will automatically appear on the screen. An example is the [OpenAI GPT Image Generator](https://instant.bot/packages/@keith/openai-gpt-image).
+If the expected result of a tool call is of type `buffer` (see [package-specification.md](../specifications/package-specification.md "mention") for more details) while the tool is executing attachments (square boxes) will automatically appear on the screen. An example is the [OpenAI GPT Image Generator](https://instant.chat/packages/@keith/openai-gpt-image).
 
 <figure><img src="../.gitbook/assets/SCR-20250515-mrfo.png" alt=""><figcaption><p>Generate an image and an attachment</p></figcaption></figure>
 

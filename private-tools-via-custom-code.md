@@ -6,7 +6,7 @@ description: Create your own private tools
 
 ## What is a custom code package?
 
-Every agent has its own **custom code package** that can be used to execute custom tools that aren't available via the public registry. You should build these tools when you want to host **proprietary tools** that connect to custom data sources you don't want exposed to the Instant.bot community.
+Every agent has its own **custom code package** that can be used to execute custom tools that aren't available via the public registry. You should build these tools when you want to host **proprietary tools** that connect to custom data sources you don't want exposed to the Instant.chat community.
 
 Custom code packages **are not open source**. They are not published to our registry and users can not see the code that executes when they are called, though they can still see requests (arguments) and responses. You can build custom code packages from the **Code** tab in your agent's toolbar.
 
@@ -48,11 +48,11 @@ You can change sample payloads for each endpoint / tool using this window. When 
 
 ## Installing NPM packages
 
-We support most NPM packages on Instant.bot. You can import NPM packages by using the appropriate `import x from 'package'` syntax. For example, the Stripe package, `import Stripe from 'stripe'` should give the following result:
+We support most NPM packages on Instant.chat. You can import NPM packages by using the appropriate `import x from 'package'` syntax. For example, the Stripe package, `import Stripe from 'stripe'` should give the following result:
 
 <figure><img src=".gitbook/assets/SCR-20250515-bkyj.png" alt=""><figcaption><p>Install the Stripe package</p></figcaption></figure>
 
-NPM packages will be installed automatically. We support any NPM package without custom binaries and a number of them with. Currently **puppeteer** is unsupported, but if you have a strong use case please drop us feedback at [feedback@instant.bot](mailto:feedback@instant.bot).
+NPM packages will be installed automatically. We support any NPM package without custom binaries and a number of them with. Currently **puppeteer** is unsupported, but if you have a strong use case please drop us feedback at [feedback@instant.chat](mailto:feedback@instant.chat).
 
 ## Writing complex functionality
 

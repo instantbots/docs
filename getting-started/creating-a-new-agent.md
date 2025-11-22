@@ -2,7 +2,7 @@
 
 ## Creating your first agent
 
-Creating your first agent is easy. If you haven’t already, sign up for Instant.bot at [https://instant.chat/signup](https://instant.chat/signup). Once you’ve registered, you’ll be walked through the agent setup flow — however if you already have an account, you can create a new agent at any time from the **Create a new agent** button on the left sidebar or visiting [https://instant.chat/chat/new](https://instant.chat/chat/new).
+Creating your first agent is easy. If you haven’t already, sign up for Instant.chat at [https://instant.chat/signup](https://instant.chat/signup). Once you’ve registered, you’ll be walked through the agent setup flow — however if you already have an account, you can create a new agent at any time from the **Create a new agent** button on the left sidebar or visiting [https://instant.chat/chat/new](https://instant.chat/chat/new).
 
 <figure><img src="../.gitbook/assets/SCR-20250507-jvaf.png" alt=""><figcaption><p>Create a new agent flow</p></figcaption></figure>
 
@@ -40,7 +40,7 @@ You’ll be brought to a chat interface and will automatically send a hello mess
 
 <figure><img src="../.gitbook/assets/SCR-20250507-kinn.png" alt=""><figcaption></figcaption></figure>
 
-Congratulations! You have now built your first agent on Instant.bot. However, you’ll notice a lot of tabs to configure your new bot — **Packages**, **Keychain**, **Code** and **Settings**. To read more, check out the reference pages.
+Congratulations! You have now built your first agent on Instant.chat. However, you’ll notice a lot of tabs to configure your new bot — **Packages**, **Keychain**, **Code** and **Settings**. To read more, check out the reference pages.
 
 * [Modifying instruction prompt](../modifying-instruction-prompt.md)
 * [Customizing your agent settings](../customizing-your-agent-settings.md)
@@ -48,4 +48,4 @@ Congratulations! You have now built your first agent on Instant.bot. However, yo
 * [Managing secrets via API keychain](../managing-secrets-via-api-keychain.md)
 * [Private tools via custom code](../private-tools-via-custom-code.md)
 
-From the entire Instant.bot team, happy building!
+From the entire Instant.chat team, happy building!

@@ -2,7 +2,7 @@
 
 ## What are packages?
 
-Packages are collections of tools that you can use to extend your agent like [generating images via OpenAI](https://instant.bot/packages/@keith/openai-gpt-image), [retrieving Stripe customers](https://instant.bot/packages/@keith/stripe) or [getting the current weather](https://instant.bot/packages/@keith/weather).
+Packages are collections of tools that you can use to extend your agent like [generating images via OpenAI](https://instant.chat/packages/@keith/openai-gpt-image), [retrieving Stripe customers](https://instant.chat/packages/@keith/stripe) or [getting the current weather](https://instant.chat/packages/@keith/weather).
 
 ### Technical details
 
@@ -29,7 +29,7 @@ By default your agent won't have any packages installed. In this case you can se
 
 <figure><img src=".gitbook/assets/SCR-20250514-phvs.png" alt=""><figcaption><p>See packages approved by the team</p></figcaption></figure>
 
-The **Discover** tab will **only show approved packages**, that is, packages that have been vetted by the Instant.bot team for security and authenticity purposes. Before we install a package, we can check the package details by **clicking on the name** or by **clicking the eye button** to view individual endpoint settings.
+The **Discover** tab will **only show approved packages**, that is, packages that have been vetted by the Instant.chat team for security and authenticity purposes. Before we install a package, we can check the package details by **clicking on the name** or by **clicking the eye button** to view individual endpoint settings.
 
 <figure><img src=".gitbook/assets/SCR-20250514-pial.png" alt=""><figcaption><p>Click the eye button to view tools and settings for the package</p></figcaption></figure>
 

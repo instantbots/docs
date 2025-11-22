@@ -10,9 +10,9 @@ description: A brief introduction to Instant.chat and what we're all about
 
 **You can extend your agent with hosted tools.** We host the functions for you as both REST API and MCP servers on auto-scaling architecture. These tools are available as open source packages;
 
-* [Stripe (retrieves customers)](https://instant.bot/packages/@keith/stripe)
-* [GPT Image Generator (creates images)](https://instant.bot/packages/@keith/openai-gpt-image)
-* [Current weather](https://instant.bot/packages/@keith/weather)
+* [Stripe (retrieves customers)](https://instant.chat/packages/@keith/stripe)
+* [GPT Image Generator (creates images)](https://instant.chat/packages/@keith/openai-gpt-image)
+* [Current weather](https://instant.chat/packages/@keith/weather)
 
 **You can fork, modify or build your own versions of packages.** You can also build your own private packages just for you or your team. Sort of like GitHub for LLM tools.
 

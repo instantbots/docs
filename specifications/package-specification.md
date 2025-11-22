@@ -1,12 +1,12 @@
 ---
-description: A guide to packages on Instant.bot
+description: A guide to packages on Instant.chat
 ---
 
 # Package specification
 
 ## Overview
 
-All packages on Instant.bot are available as both **REST API servers** and **MCP servers**. They are hosted on `{package}.instant.bot` and expose HTTP endpoints that act as tools. They are built using the [Instant API framework](https://gitub.com/instant-dev/api), a JavaScript framework and gateway that turns JavaScript functions into type-validated HTTP endpoints with built-in bindings for the MCP Streamable HTTP specification.
+All packages on Instant.chat are available as both **REST API servers** and **MCP servers**. They are hosted on `{package}.instant.chat` and expose HTTP endpoints that act as tools. They are built using the [Instant API framework](https://gitub.com/instant-dev/api), a JavaScript framework and gateway that turns JavaScript functions into type-validated HTTP endpoints with built-in bindings for the MCP Streamable HTTP specification.
 
 **REST** means **Re**presentational **S**tate **T**ransfer and is a fancy way of saying these servers expose endpoints that support multiple HTTP verbs: `GET`, `POST`, `PUT`, `DELETE`.
 
@@ -16,9 +16,9 @@ All packages on Instant.bot are available as both **REST API servers** and **MCP
 
 For an example of what hosted tools look like in production, visit:
 
-* [Current weather package](https://instant.bot/packages/@keith/weather)
-* [Stripe customer package](https://instant.bot/packages/@keith/stripe) (includes **required** keys)
-* [GPT image generator package](https://instant.bot/packages/@keith/openai-gpt-image) (outputs image)
+* [Current weather package](https://instant.chat/packages/@keith/weather)
+* [Stripe customer package](https://instant.chat/packages/@keith/stripe) (includes **required** keys)
+* [GPT image generator package](https://instant.chat/packages/@keith/openai-gpt-image) (outputs image)
 
 ## Instant API
 
@@ -30,17 +30,17 @@ Instant API is part of a [broader JavaScript framework + ORM called instant.dev]
 
 ## Package hosting
 
-The Instant.bot package registry automatically hosts and scales your Instant API projects for you as packages. However, Instant API projects can be hosted on any infrastructure provider that supports Node.js 20.x or above: like Vercel, Railway and AWS. This means projects that you build on Instant.bot are _transportable_. When you build tools for Instant.bot you are not locked in to using us as a hosting provider, though we do manage secret storage, package verification and more.
+The Instant.chat package registry automatically hosts and scales your Instant API projects for you as packages. However, Instant API projects can be hosted on any infrastructure provider that supports Node.js 20.x or above: like Vercel, Railway and AWS. This means projects that you build on Instant.chat are _transportable_. When you build tools for Instant.chat you are not locked in to using us as a hosting provider, though we do manage secret storage, package verification and more.
 
 ### Our registry domain
 
-All packages for Instant.bot are hosted on our gateway at `{package}.instant.host`
+All packages for Instant.chat are hosted on our gateway at `{package}.instant.host`
 
 ### Authentication and making requests
 
 You authenticate into packages using **API keychains**, a primitive we have created for securely storing, managing and delegating access to third-party secrets and auth.
 
-These keychains (1) authenticate you as an Instant.bot user and (2) can scaffold one or more API secrets that can be shared with packages. For security considerations, please read the [api-keychain-specification.md](api-keychain-specification.md "mention").
+These keychains (1) authenticate you as an Instant.chat user and (2) can scaffold one or more API secrets that can be shared with packages. For security considerations, please read the [api-keychain-specification.md](api-keychain-specification.md "mention").
 
 ```sh
 curl https://{package}.instant.host/endpoint-name \
@@ -63,15 +63,15 @@ functions/
     index.js          # subdir root endpoint, path = /subdir
     do-thing.js       # endpoint, path = /subdir/do-thing
     404.js            # catchall endpoint, path = /subdir/*
-instant.package.json  # instant.bot package info
+instant.package.json  # instant.chat package info
 package.json          # traditional node.js package.json
 ```
 
-As you can see, Instant.bot packages use **file-based routing**. Everything exported from the `functions/` folder is available as an API endpoint.
+As you can see, Instant.chat packages use **file-based routing**. Everything exported from the `functions/` folder is available as an API endpoint.
 
 ## instant.package.json
 
-This is your Instant.bot package configuration. It typically has the following format;
+This is your Instant.chat package configuration. It typically has the following format;
 
 ```json
 {
@@ -84,11 +84,11 @@ Where `"name"` is the package name, usually of the format `@user/package` for pu
 
 ### Changing timeout
 
-The default timeout for Instant.bot packages is 10 seconds. This means tools that are part of this package will run for 10 seconds before automatically halting execution. You can manually change this value to any number between 1 (1 second) and 300 (5 minutes).
+The default timeout for Instant.chat packages is 10 seconds. This means tools that are part of this package will run for 10 seconds before automatically halting execution. You can manually change this value to any number between 1 (1 second) and 300 (5 minutes).
 
 ### Setting required keychain keys
 
-Public packages can request secret keys from API keychains. For example, the [Stripe customers package](https://instant.bot/packages/@keith/stripe) requires a **STRIPE\_SECRET\_KEY** to use it successfully. To set these per package, add them to your `instant.package.json` like so:
+Public packages can request secret keys from API keychains. For example, the [Stripe customers package](https://instant.chat/packages/@keith/stripe) requires a **STRIPE\_SECRET\_KEY** to use it successfully. To set these per package, add them to your `instant.package.json` like so:
 
 ```json
 {
@@ -383,9 +383,9 @@ We'll get the following error.
 }
 ```
 
-## Returning attachments in the Instant.bot UI
+## Returning attachments in the Instant.chat UI
 
-To have a package return attachments in the Instant.bot UI, simply make sure you set the return type to `buffer` like so:
+To have a package return attachments in the Instant.chat UI, simply make sure you set the return type to `buffer` like so:
 
 ```javascript
 import fs from 'fs';
@@ -439,7 +439,7 @@ export default async function () {
 
 ## Type validation
 
-You get tool type validation for free when building packages with Instant.bot as part of the [Instant API](https://github.com/instant-dev/api) framework. You can define types for both `@param` and `@returns` arguments in the function signature. Instant API supports the following types.
+You get tool type validation for free when building packages with Instant.chat as part of the [Instant API](https://github.com/instant-dev/api) framework. You can define types for both `@param` and `@returns` arguments in the function signature. Instant API supports the following types.
 
 ### Supported types
 
@@ -647,5 +647,5 @@ With Instant API, **query and body parameters can be used interchangeably**. If 
 
 ## That's it!
 
-That covers the basics of building packages on Instant.bot. If you have any questions, please do not hesitate to jump into our community Discord server at [discord.gg/instant](https://discord.gg/instant).
+That covers the basics of building packages on Instant.chat. If you have any questions, please do not hesitate to jump into our community Discord server at [discord.gg/instant](https://discord.gg/instant).
 

@@ -6,9 +6,9 @@ description: A guide to API keychains
 
 ## Overview
 
-API keychains are how authentication is managed for Instant.bot packages. They have three primary responsibilities.
+API keychains are how authentication is managed for Instant.chat packages. They have three primary responsibilities.
 
-1. Authenticate you via our gateway so you can use Instant.bot packages
+1. Authenticate you via our gateway so you can use Instant.chat packages
 2. Securely store third-party secrets and share them with packages
 3. Delegate access to specific packages
 
@@ -16,7 +16,7 @@ API keychains are how authentication is managed for Instant.bot packages. They h
 
 API keychains have the ability to **store and share** third-party secrets with packages. Packages can contain code written by you or third-party developers. This comes with security concerns; notably, how do I prevent unauthorized use of my keys?
 
-At Instant.bot we take your security seriously and have a three-pillared approach.
+At Instant.chat we take your security seriously and have a three-pillared approach.
 
 1. API keychains can only share secrets with public packages
 2. API keychains provision secret access on double opt-in, per package basis
@@ -24,7 +24,7 @@ At Instant.bot we take your security seriously and have a three-pillared approac
 
 #### 1. API keychains can only share secrets with public packages
 
-Public packages are **open source**, which means you have the ability to manually inspect and verify all code that may have access to your secrets. For example, this [Stripe customers](https://instant.bot/packages/@keith/stripe) uses a `STRIPE_SECRET_KEY`. You can manually inspect the code to verify this is only used in the context of instantiating the Stripe package.
+Public packages are **open source**, which means you have the ability to manually inspect and verify all code that may have access to your secrets. For example, this [Stripe customers](https://instant.chat/packages/@keith/stripe) uses a `STRIPE_SECRET_KEY`. You can manually inspect the code to verify this is only used in the context of instantiating the Stripe package.
 
 #### 2. API keychains provision secret access on double opt-in, per-package basis
 
@@ -68,7 +68,7 @@ So in order to share `STRIPE_SECRET_KEY` with `@user/package`, there's a double 
 
 I am feeling confident — I have (1) verified the code publicly and (2) opted-in to sharing secrets. But what if a malicious package owner or hijacker overwrites a published package unbeknownst to me?
 
-**Every package that gets published to Instant.bot gets automatically assigned a SHA256 hash based on its contents.** Two packages with identical structure and code will have identical SHA256 hashes.
+**Every package that gets published to Instant.chat gets automatically assigned a SHA256 hash based on its contents.** Two packages with identical structure and code will have identical SHA256 hashes.
 
 When you provision package access, you **also** provision a specific SHA256 hash:
 
@@ -115,11 +115,11 @@ export default async function (context) {
 
 ## Using your agent's API keychain
 
-Your agent automatically has an API keychain assigned to it when it is created. It uses this API keychain to manage package access and share secrets with packages. All of this is handled directly via Instant.bot, and you can read more at [managing-secrets-via-api-keychain.md](../managing-secrets-via-api-keychain.md "mention").
+Your agent automatically has an API keychain assigned to it when it is created. It uses this API keychain to manage package access and share secrets with packages. All of this is handled directly via Instant.chat, and you can read more at [managing-secrets-via-api-keychain.md](../managing-secrets-via-api-keychain.md "mention").
 
 ## Using API keychains for authentication
 
-You can create your own API keychains to use with packages at [instant.bot/dashboard/api-keychains](https://instant.bot/dashboard/api-keychains). If you do not yet have a keychain, you can create one at [instant.bot/dashboard/api-keychains/new](https://instant.bot/dashboard/api-keychains/new) or by clicking **+ Create API keychain** on the keychains page.
+You can create your own API keychains to use with packages at [instant.chat/dashboard/api-keychains](https://instant.chat/dashboard/api-keychains). If you do not yet have a keychain, you can create one at [instant.chat/dashboard/api-keychains/new](https://instant.chat/dashboard/api-keychains/new) or by clicking **+ Create API keychain** on the keychains page.
 
 <figure><img src="../.gitbook/assets/SCR-20250521-nfpt.png" alt=""><figcaption><p>Create an API keychain</p></figcaption></figure>
 
@@ -127,7 +127,7 @@ Each API keychain created here will have its own **secret key**.
 
 <figure><img src="../.gitbook/assets/SCR-20250521-nghg.png" alt=""><figcaption></figcaption></figure>
 
-You can use this secret as a `Bearer` token to access any public package available at [instant.bot/packages](https://instant.bot/packages).
+You can use this secret as a `Bearer` token to access any public package available at [instant.chat/packages](https://instant.chat/packages).
 
 ```sh
 curl https://{package}.instant.host/endpoint-name \
@@ -137,7 +137,7 @@ curl https://{package}.instant.host/endpoint-name \
   --data '{"some":"json"}'
 ```
 
-For example, the example weather package has a [GET endpoint for retrieving current weather](https://instant.bot/packages/@keith/weather/v-20240823/functions/forecast.js?method=GET). You can see instructions for how to use it as a standalone endpoint if you scroll down on the endpoint page:
+For example, the example weather package has a [GET endpoint for retrieving current weather](https://instant.chat/packages/@keith/weather/v-20240823/functions/forecast.js?method=GET). You can see instructions for how to use it as a standalone endpoint if you scroll down on the endpoint page:
 
 <figure><img src="../.gitbook/assets/SCR-20250521-neks.png" alt=""><figcaption><p>Copy endpoint instructions</p></figcaption></figure>
 
@@ -151,7 +151,7 @@ By default, packages only have access to shared secrets that (1) they request ac
 Adding a secret here **will not** automatically share it with packages. Please see **delegating access to packages** below.
 {% endhint %}
 
-Each API keychain can store as many third-party secrets as you'd like. To manage secrets, first visit the API keychains page at [instant.bot/dashboard/api-keychains](https://instant.bot/dashboard/api-keychains) and select your keychain.
+Each API keychain can store as many third-party secrets as you'd like. To manage secrets, first visit the API keychains page at [instant.chat/dashboard/api-keychains](https://instant.chat/dashboard/api-keychains) and select your keychain.
 
 <figure><img src="../.gitbook/assets/SCR-20250521-ngxi.png" alt=""><figcaption><p>Find your keychain</p></figcaption></figure>
 

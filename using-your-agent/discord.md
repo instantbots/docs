@@ -7,9 +7,9 @@ description: Use your agent inside of your Discord server
 ## Linking your agent to Discord
 
 {% hint style="info" %}
-Each Discord server can only have **one** active Instant.bot agent at any time.\
+Each Discord server can only have **one** active Instant.chat agent at any time.\
 However, an agent may be linked to **multiple** Discord servers.\
-If you have a need for more than one agent per server, please reach out to [feedback@instant.bot](mailto:feedback@instant.bot) with your use case.
+If you have a need for more than one agent per server, please reach out to [feedback@instant.chat](mailto:feedback@instant.chat) with your use case.
 {% endhint %}
 
 To start using your agent on Discord, you first need to link your agent to a Discord server. This can be done at any time from the **\[Settings]** tab.
@@ -48,7 +48,7 @@ To chat with your agent in Discord, just mention it using `@Instant` or its curr
 
 ## Chat input
 
-While in beta, only text input to agents is currently supported. We're working to add multiple modalities and will keep you posted! Please send any feedback here to [feedback@instant.bot](mailto:feedback@instant.bot).
+While in beta, only text input to agents is currently supported. We're working to add multiple modalities and will keep you posted! Please send any feedback here to [feedback@instant.chat](mailto:feedback@instant.chat).
 
 ## Chat output
 
