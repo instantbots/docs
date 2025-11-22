@@ -2,7 +2,7 @@
 
 ## Creating your first agent
 
-Creating your first agent is easy. If you haven’t already, sign up for Instant.bot at [https://instant.bot/signup](https://instant.bot/signup). Once you’ve registered, you’ll be walked through the agent setup flow — however if you already have an account, you can create a new agent at any time from the **Create a new agent** button on the left sidebar or visiting [https://instant.bot/chat/new](https://instant.bot/chat/new).
+Creating your first agent is easy. If you haven’t already, sign up for Instant.bot at [https://instant.chat/signup](https://instant.chat/signup). Once you’ve registered, you’ll be walked through the agent setup flow — however if you already have an account, you can create a new agent at any time from the **Create a new agent** button on the left sidebar or visiting [https://instant.chat/chat/new](https://instant.chat/chat/new).
 
 <figure><img src="../.gitbook/assets/SCR-20250507-jvaf.png" alt=""><figcaption><p>Create a new agent flow</p></figcaption></figure>
 

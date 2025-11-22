@@ -1,5 +1,5 @@
 ---
-description: A brief introduction to Instant.bot and what we're all about
+description: A brief introduction to Instant.chat and what we're all about
 ---
 
 # Introduction
